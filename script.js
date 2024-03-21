@@ -6,6 +6,7 @@ function draw() {
     background("green");  
 
     smilyFaceRadu();
+    smilyFaceSammy();
 }
 
 function smilyFaceRadu() {
@@ -35,3 +36,30 @@ function smilyFaceRadu() {
      circle(420, 305, 7);
      circle(380, 305, 7);
 }
+
+  function smilyFaceSammy() {
+    background(220);
+    fill(0, 0, 255); 
+    ellipse(width / 2, height / 2, 50, 50); 
+    eyes();
+    smile();
+
+    function eyes(){
+        strokeWeight(5);
+        point(390, 290);
+        point(408, 290);
+        strokeWeight(1);
+      }
+
+    function smile(){
+    noFill();
+    stroke(0);
+    strokeWeight(3);
+    arc(width / 2, height / 2 + 5, 30, 20, 0, PI);
+    }
+  }
+  
+  
+  
+ 
+  
