@@ -5,36 +5,36 @@ function setup() {
 function draw() {
   background("green");
 
-  smilyFaceRadu();
-  smilyFaceSammy();
+  smilyFaceRadu(400, 300);
+//   smilyFaceSammy();
 }
 
-function smilyFaceRadu() {
+function smilyFaceRadu(x, y) {
   // BODY
   fill("white");
   stroke("black");
-  circle(400, 300, 50);
+  circle(x, y, 50);
 
   // EYES
   stroke("brown");
-  ellipse(390, 290, 10, 5);
-  ellipse(410, 290, 10, 5);
+  ellipse(x-10, y-10, 10, 5);
+  ellipse(x+10, y-10, 10, 5);
   // EYE PUPILS
   stroke("black");
   fill("black");
-  circle(390, 290, 2);
-  circle(410, 290, 2);
+  circle(x-10, y-10, 2);
+  circle(x+10, y-10, 2);
 
   // MOUNTH
   stroke("red");
   fill("gray");
-  arc(400, 310, 30, 10, 0, Math.PI);
+  arc(x, y+10, 30, 10, 0, Math.PI);
 
   // CHEEKS
   stroke("pink");
   fill("pink");
-  circle(420, 305, 7);
-  circle(380, 305, 7);
+  circle(x+20, y+5, 7);
+  circle(x-20, y+5, 7);
 }
 
 function smilyFaceSammy() {
