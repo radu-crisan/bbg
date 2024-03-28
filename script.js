@@ -1,14 +1,30 @@
+let tableWidth = 800;
+let tableHeigth = 600; 
+
+let smRaduX = 400;
+let smRaduY = 300;
+
+let directionX = 1;
+
 function setup() {
-  createCanvas(800, 600);
+  createCanvas(tableWidth, tableHeigth);
 }
 
 function draw() {
   background("green");
 
-  smilyFaceRadu(400, 300);
-  smilyFaceSammy(400,300);
+  checkLimitsSMRadu();
+
+  smilyFaceRadu(smRaduX, smRaduY);
+  smilyFaceSammy(200, 100);
 }
 
+function checkLimitsSMRadu() {
+    if (smRaduX >= tableWidth) 
+        directionX *= -1; 
+
+    smRaduX += directionX; 
+}
 function smilyFaceRadu(x, y) {
   // BODY
   fill("white");
