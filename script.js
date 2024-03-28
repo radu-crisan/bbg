@@ -4,10 +4,11 @@ let tableHeigth = 600;
 let smRaduX = 400;
 let smRaduY = 300;
 
-let smSammyX = 600;
-let smSammyY = 200;
+let smSammyX = 200;
+let smSammyY = 300;
 
 let directionX = 1;
+let directionSammyX = 1;
 
 function setup() {
   createCanvas(tableWidth, tableHeigth);
@@ -17,8 +18,9 @@ function draw() {
   background("green");
 
   smilyFaceRadu(smRaduX, smRaduY);
-  smilyFaceSammy(smSammyX --, smSammyY++); 
+  smilyFaceSammy(smSammyX, smSammyY--); 
   checkLimitsSMRadu();
+  checkLimitsSMSammy();
 
 }
 
@@ -27,6 +29,12 @@ function checkLimitsSMRadu() {
         directionX *= -1; 
 
     smRaduX += directionX; 
+}
+function checkLimitsSMSammy(){
+  if (smSammyX >= tableWidth) 
+        directionX *= -1; 
+
+    smSammyX += directionSammyX;
 }
 function smilyFaceRadu(x, y) {
   // BODY
