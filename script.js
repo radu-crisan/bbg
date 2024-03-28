@@ -1,3 +1,5 @@
+let smSammyX = 400;
+let smSammyY = 300;
 function setup() {
   createCanvas(800, 600);
 }
@@ -6,7 +8,7 @@ function draw() {
   background("green");
 
   smilyFaceRadu(400, 300);
-  smilyFaceSammy(400,300);
+  smilyFaceSammy(smSammyX --, smSammyY++); 
 }
 
 function smilyFaceRadu(x, y) {
