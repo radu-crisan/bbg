@@ -1,12 +1,14 @@
-let smRaduX = 400;
-let smRaduY = 300;
-let directionRaduX = 1;
+let smRadu = {
+    x: 400,
+    y: 300,
+    directionX: 1
+};
 
 function checkLimitsSMRadu() {
-    if (smRaduX >= tableWidth) 
-    directionRaduX *= -1; 
+    if (smRadu.x >= tableWidth) 
+        smRadu.directionX *= -1; 
 
-    smRaduX += directionRaduX; 
+    smRadu.x += smRadu.directionX; 
 }
 
 function smilyFaceRadu(x, y) {

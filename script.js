@@ -8,7 +8,7 @@ function setup() {
 function draw() {
   background("green");
 
-  smilyFaceRadu(smRaduX, smRaduY);
+  smilyFaceRadu(smRadu.x, smRadu.y);
   smilyFaceSammy(smSammyX, smSammyY); 
   checkLimitsSMRadu();
   checkLimitsSMSammy();
