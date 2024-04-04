@@ -1,11 +1,11 @@
 let smRadu = {
   x: 400,
   y: 300,
-  ray: 25,
+  ray: 15,
   directionX: 1,
   directionY: 1,
-  speedX: 5,
-  speedY: 5,
+  speedX: 0,
+  speedY: 0,
 };
 
 function checkLimitsSMRadu() {
@@ -30,22 +30,22 @@ function smilyFaceRadu(x, y) {
 
   // EYES
   stroke("brown");
-  ellipse(x - 10, y - 10, 10, 5);
-  ellipse(x + 10, y - 10, 10, 5);
+  ellipse(x - (smRadu.ray * 2) / 5, y - (smRadu.ray * 2) / 5, (smRadu.ray * 2) / 5, (smRadu.ray * 2) / 10);
+  ellipse(x + (smRadu.ray * 2) / 5, y - (smRadu.ray * 2) / 5, (smRadu.ray * 2) / 5, (smRadu.ray * 2) / 10);
   // EYE PUPILS
   stroke("black");
   fill("black");
-  circle(x - 10, y - 10, 2);
-  circle(x + 10, y - 10, 2);
+  circle(x - (smRadu.ray * 2) / 5, y - (smRadu.ray * 2) / 5, (smRadu.ray * 2) / 25);
+  circle(x + (smRadu.ray * 2) / 5, y - (smRadu.ray * 2) / 5, (smRadu.ray * 2) / 25);
 
   // MOUNTH
   stroke("red");
   fill("gray");
-  arc(x, y + 10, 30, 10, 0, Math.PI);
+  arc(x, y + (smRadu.ray * 2) / 5, (smRadu.ray * 2) / 1.6, (smRadu.ray * 2) / 5, 0, Math.PI);
 
   // CHEEKS
   stroke("pink");
   fill("pink");
-  circle(x + 20, y + 5, 7);
-  circle(x - 20, y + 5, 7);
+  circle(x + (smRadu.ray * 2) / 2.5, y + (smRadu.ray * 2) / 10, (smRadu.ray * 2) / 7.14);
+  circle(x - (smRadu.ray * 2) / 2.5, y + (smRadu.ray * 2) / 10, (smRadu.ray * 2) / 7.14);
 }
