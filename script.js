@@ -12,4 +12,6 @@ function draw() {
   smilyFaceSammy(smSammy.x, smSammy.y); 
   checkLimitsSMRadu();
   checkLimitsSMSammy();
+
+  createPaddleSammy();
 }
