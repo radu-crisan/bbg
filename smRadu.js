@@ -5,7 +5,7 @@ let smRadu = {
 };
 
 function checkLimitsSMRadu() {
-    if (smRadu.x >= tableWidth) 
+    if (smRadu.x >= tableWidth || smRadu.x <= 0) 
         smRadu.directionX *= -1; 
 
     smRadu.x += smRadu.directionX; 
