@@ -1,19 +1,24 @@
 let smRadu = {
   x: 400,
   y: 300,
+  ray: 25,
   directionX: 1,
   directionY: 1,
-  speedX: 10,
-  speedY: 10,
+  speedX: 5,
+  speedY: 5,
 };
 
 function checkLimitsSMRadu() {
   // verificare pe dreapta + stanga
-  if (smRadu.x >= tableWidth || smRadu.x <= 0) smRadu.directionX *= -1;
+  if (smRadu.x >= tableWidth - smRadu.ray || smRadu.x <= 0 + smRadu.ray) { 
+    smRadu.directionX *= -1;
+  }
   smRadu.x += smRadu.directionX * smRadu.speedX;
 
   // verificarea pe jos + sus
-  if (smRadu.y >= tableHeigth || smRadu.y <= 0) smRadu.directionY *= -1;
+  if (smRadu.y >= tableHeigth - smRadu.ray || smRadu.y <= 0 + smRadu.ray) {
+    smRadu.directionY *= -1;
+  }
   smRadu.y += smRadu.directionY * smRadu.speedY;
 }
 
@@ -21,7 +26,7 @@ function smilyFaceRadu(x, y) {
   // BODY
   fill("white");
   stroke("black");
-  circle(x, y, 50);
+  circle(x, y, smRadu.ray * 2);
 
   // EYES
   stroke("brown");
