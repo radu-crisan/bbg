@@ -18,7 +18,7 @@ function draw() {
   background("green");
 
   smilyFaceRadu(smRaduX, smRaduY);
-  smilyFaceSammy(smSammyX, smSammyY--); 
+  smilyFaceSammy(smSammyX, smSammyY); 
   checkLimitsSMRadu();
   checkLimitsSMSammy();
 
@@ -32,7 +32,7 @@ function checkLimitsSMRadu() {
 }
 function checkLimitsSMSammy(){
   if (smSammyX >= tableWidth) 
-        directionX *= -1; 
+        directionSammyX *= -1; 
 
     smSammyX += directionSammyX;
 }
