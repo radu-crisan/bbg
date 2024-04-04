@@ -3,17 +3,18 @@ let smRadu = {
   y: 300,
   directionX: 1,
   directionY: 1,
-  speed: 10,
+  speedX: 10,
+  speedY: 10,
 };
 
 function checkLimitsSMRadu() {
   // verificare pe dreapta + stanga
   if (smRadu.x >= tableWidth || smRadu.x <= 0) smRadu.directionX *= -1;
-  smRadu.x += smRadu.directionX * smRadu.speed;
+  smRadu.x += smRadu.directionX * smRadu.speedX;
 
   // verificarea pe jos + sus
   if (smRadu.y >= tableHeigth || smRadu.y <= 0) smRadu.directionY *= -1;
-  smRadu.y += smRadu.directionY * smRadu.speed;
+  smRadu.y += smRadu.directionY * smRadu.speedY;
 }
 
 function smilyFaceRadu(x, y) {
