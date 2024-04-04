@@ -7,7 +7,7 @@ let smRaduY = 300;
 let smSammyX = 200;
 let smSammyY = 300;
 
-let directionX = 1;
+let directionRaduX = 1;
 let directionSammyX = 1;
 
 function setup() {
@@ -26,9 +26,9 @@ function draw() {
 
 function checkLimitsSMRadu() {
     if (smRaduX >= tableWidth) 
-        directionX *= -1; 
+    directionRaduX *= -1; 
 
-    smRaduX += directionX; 
+    smRaduX += directionRaduX; 
 }
 function checkLimitsSMSammy(){
   if (smSammyX >= tableWidth) 
