@@ -10,6 +10,9 @@ function draw() {
 
   smilyFaceRadu(smRadu.x, smRadu.y);
   smilyFaceSammy(smSammy.x, smSammy.y); 
+
   checkLimitsSMRadu();
   checkLimitsSMSammy();
+
+  createPaddleRadu();
 }
