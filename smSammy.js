@@ -1,7 +1,7 @@
 let smSammy = {
     x: 200,
     y: 300,
-    directionX: 10,
+    directionX: 1,
     directionY: 1,
 };
 function checkLimitsSMSammy(){
