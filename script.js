@@ -32,7 +32,7 @@ function checkLimitsSMRadu() {
 }
 function checkLimitsSMSammy(){
   if (smSammyX >= tableWidth) 
-        directionX *= -1; 
+        directionSammyX *= -1; 
 
     smSammyX += directionSammyX;
 }
