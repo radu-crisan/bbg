@@ -18,7 +18,7 @@ function draw() {
   background("green");
 
   smilyFaceRadu(smRaduX, smRaduY);
-  smilyFaceSammy(smSammyX, smSammyY--); 
+  smilyFaceSammy(smSammyX, smSammyY); 
   checkLimitsSMRadu();
   checkLimitsSMSammy();
 
