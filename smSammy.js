@@ -33,8 +33,8 @@ function smilyFaceSammy(x, y) {
     // EYES
     stroke("black");
     fill("black");
-    circle(x-10, y-10, 2);
-    circle(x+10, y-10, 2);
+    circle(x-(smSammy.ray*2)/5, y-(smSammy.ray*2)/5, (smSammy.ray*2)/5);
+    circle(x+(smSammy.ray*2)/5, y-(smSammy.ray*2)/5, (smSammy.ray*2)/5);
   
     // SMILE
     stroke("black");
