@@ -1,13 +1,13 @@
-let smSammyX = 200;
-let smSammyY = 300;
-
-let directionSammyX = 1;
-
+let smSammy = {
+    x: 200,
+    y: 300,
+    directionX: 1,
+};
 function checkLimitsSMSammy(){
-    if (smSammyX >= tableWidth) 
-          directionSammyX *= -1; 
+    if (smSammy.x >= tableWidth) 
+          smSammy.directionX *= -1; 
   
-      smSammyX += directionSammyX;
+      smSammy.x += smSammy.directionX;
   }
 
 function smilyFaceSammy(x, y) {
