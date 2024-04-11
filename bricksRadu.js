@@ -1,12 +1,12 @@
-let bricks = []
+let bricksRadu = []
 
-const bricksRows = 1 
-const bricksCols = 1
-const rowBricksNumber = 4
+const bricksRowsRadu = 1 
+const bricksColsRadu = 1
+const rowBricksNumberRadu = 4
 
-function initBricks() {
-    for (let i = 0; i < bricksRows * rowBricksNumber; i++) {
-        bricks.push({
+function initBricksRadu() {
+    for (let i = 0; i < bricksRowsRadu * rowBricksNumberRadu; i++) {
+        bricksRadu.push({
             hit: false,
             x: i*70,
             y: 15,
@@ -17,9 +17,9 @@ function initBricks() {
     }
 }
 
-function createBicks() {
+function createBicksRadu() {
 
-    bricks.forEach(brick => {
+    bricksRadu.forEach(brick => {
         fill(brick.color);
         rect(brick.x, brick.y, brick.width, brick.height)
     })

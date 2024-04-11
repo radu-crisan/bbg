@@ -3,7 +3,7 @@ let tableHeigth = 600;
 
 function setup() {
   createCanvas(tableWidth, tableHeigth);
-  initBriks();
+  initBriksRadu();
 }
 
 function draw() {
@@ -18,5 +18,5 @@ function draw() {
   createPaddleSammy();
   createPaddleRadu();
 
-  createBicks();
+  createBicksRadu();
 }
