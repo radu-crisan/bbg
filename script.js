@@ -8,11 +8,11 @@ function setup() {
 function draw() {
   background("green");
 
-  smilyFaceRadu(smRadu.x, smRadu.y);
-  smilyFaceSammy(smSammy.x, smSammy.y); 
-
   checkLimitsSMRadu();
   checkLimitsSMSammy();
+
+  smilyFaceRadu(smRadu.x, smRadu.y);
+  smilyFaceSammy(smSammy.x, smSammy.y); 
 
   createPaddleSammy();
   createPaddleRadu();
