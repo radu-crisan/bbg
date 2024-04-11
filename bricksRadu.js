@@ -4,7 +4,7 @@ const bricksRows = 1
 const bricksCols = 1
 const rowBricksNumber = 4
 
-function initBriks() {
+function initBricks() {
     for (let i = 0; i < bricksRows * rowBricksNumber; i++) {
         bricks.push({
             hit: false,
