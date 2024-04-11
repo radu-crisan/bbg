@@ -17,7 +17,7 @@ function initBricksRadu() {
     }
 }
 
-function createBicksRadu() {
+function createBricksRadu() {
 
     bricksRadu.forEach(brick => {
         fill(brick.color);
