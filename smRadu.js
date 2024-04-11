@@ -4,8 +4,8 @@ let smRadu = {
   ray: 15,
   directionX: 1,
   directionY: 1,
-  speedX: 0,
-  speedY: 0,
+  speedX: 1,
+  speedY: 1,
 };
 
 function checkLimitsSMRadu() {
