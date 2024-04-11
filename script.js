@@ -14,5 +14,6 @@ function draw() {
   checkLimitsSMRadu();
   checkLimitsSMSammy();
 
+  createPaddleSammy();
   createPaddleRadu();
 }
