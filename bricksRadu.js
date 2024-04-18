@@ -13,7 +13,7 @@ const brickWidthRadu = Math.floor(
     rowBricksNumberRadu
 );
 
-function initBriksRadu() {
+function initBricksRadu() {
   let x = marginRadu;
   for (let i = 0; i < bricksRowsRadu * rowBricksNumberRadu; i++) {
     const row = Math.floor(i / rowBricksNumberRadu) + 1;
@@ -33,7 +33,7 @@ function initBriksRadu() {
   }
 }
 
-function createBicksRadu() {
+function createBricksRadu() {
   bricksRadu.forEach((brick) => {
     fill(brick.color);
     rect(brick.x, brick.y, brick.width, brick.height);

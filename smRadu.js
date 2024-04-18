@@ -23,7 +23,7 @@ function checkLimitsSMRadu() {
   //  verifica paleta
   if (
     smRadu.y >= pdRadu.y - smRadu.ray &&
-    smRadu.y <= pdRadu.y + pdRadu.heigth &&
+    smRadu.y <= pdRadu.y + pdRadu.height &&
     smRadu.x >= pdRadu.x - smRadu.ray &&
     smRadu.x <= pdRadu.x + pdRadu.width + smRadu.ray
   ) {
