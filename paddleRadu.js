@@ -3,11 +3,11 @@ let pdRadu = {
     y: 580,
     color: "#00ff00",
     width: 100,
-    heigth: 10 
+    height: 10 
 }
 
 function createPaddleRadu() {
     fill(pdRadu.color)
     pdRadu.x = mouseX - pdRadu.width/2;
-    rect(pdRadu.x, pdRadu.y, pdRadu.width, pdRadu.heigth)
+    rect(pdRadu.x, pdRadu.y, pdRadu.width, pdRadu.height)
 }

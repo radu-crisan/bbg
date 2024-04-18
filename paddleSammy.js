@@ -1,13 +1,14 @@
 let pdSammy ={
-    x: 100,
+    x: tableWidth/2,
     y: 500,
     color: "black",
-    width: 50,
-    height: 5,
+    width: 100,
+    height: 10,
 }
 
 function createPaddleSammy(){
 
     fill(pdSammy.color)
-    rect(mouseX, pdSammy.y, pdSammy.width, pdSammy.height);
+    pdSammy.x=mouseX - pdSammy.width / 2;
+    rect(pdSammy.x, pdSammy.y, pdSammy.width, pdSammy.height);
 }

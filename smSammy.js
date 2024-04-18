@@ -9,15 +9,28 @@ let smSammy = {
     
 };
 function checkLimitsSMSammy(){
-    if (smSammy.x >= tableWidth - smSammy.ray ||  smSammy.x <= 0 + smSammy.ray) 
-          smSammy.directionX *= -1; 
+   
+  if (smSammy.x >= tableWidth - smSammy.ray || smSammy.x <= 0 + smSammy.ray) {
+    smSammy.directionX *= -1;
+  }
+  smSammy.x += smSammy.directionX * smSammy.speedX;
   
-      smSammy.x += smSammy.directionX * smSammy.speedX;
+  
+  if (smSammy.y <= 0 + smSammy.ray) {
+    smSammy.directionY *= -1;
+  }
 
-      if (smSammy.y >= tableHeigth - smSammy.ray || smSammy.y <=0 + smSammy.ray) 
-      smSammy.directionY *= -1; 
-
-        smSammy.y += smSammy.directionY * smSammy.speedY;
+ 
+  if (
+    smSammy.y >= pdSammy.y - smSammy.ray &&
+    smSammy.y <= pdSammy.y + pdSammy.height &&
+    smSammy.x >= pdSammy.x - smSammy.ray &&
+    smSammy.x <= pdSammy.x + pdSammy.width + smSammy.ray
+  ) {
+    smSammy.directionY *= -1;
+    
+  }
+    smSammy.y += smSammy.directionY * smSammy.speedY;
   }
 
 function smilyFaceSammy(x, y) {
@@ -33,8 +46,8 @@ function smilyFaceSammy(x, y) {
     // EYES
     stroke("black");
     fill("black");
-    circle(x-(smSammy.ray*2)/5, y-(smSammy.ray*2)/5, (smSammy.ray*2)/5);
-    circle(x+(smSammy.ray*2)/5, y-(smSammy.ray*2)/5, (smSammy.ray*2)/5);
+    circle(x-(smSammy.ray*2)/5, y-(smSammy.ray*2)/5, (smSammy.ray*2)/10);
+    circle(x+(smSammy.ray*2)/5, y-(smSammy.ray*2)/5, (smSammy.ray*2)/10);
   
     // SMILE
     stroke("black");
