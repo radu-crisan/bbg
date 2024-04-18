@@ -1,11 +1,11 @@
 let smSammy = {
     x: 200,
     y: 300,
-    ray: 25,
+    ray: 20,
     directionX: 1,
     directionY: 1,
-    speedX:  2,
-    speedY: 3,
+    speedX:  4,
+    speedY: 4,
     
 };
 function checkLimitsSMSammy(){
@@ -16,7 +16,7 @@ function checkLimitsSMSammy(){
   smSammy.x += smSammy.directionX * smSammy.speedX;
   
   
-  if (smSammy.y <= 0 + smSammy.ray) {
+  if (smSammy.y <= 0 + smSammy.ray || smSammy.y >= tableWidth - smSammy.ray) {
     smSammy.directionY *= -1;
   }
 
