@@ -1,27 +1,41 @@
-let bricksRadu = []
+let bricksRadu = [];
 
-const bricksRowsRadu = 1 
-const bricksColsRadu = 1
-const rowBricksNumberRadu = 4
+const marginRadu = 10;
+const distanceBetweenBricksRadu = 10;
+
+const bricksRowsRadu = 3;
+const rowBricksNumberRadu = 7;
+
+const brickWidthRadu = Math.floor(
+  (tableWidth -
+    marginRadu * 2 -
+    (rowBricksNumberRadu - 1) * distanceBetweenBricksRadu) /
+    rowBricksNumberRadu
+);
 
 function initBriksRadu() {
-    for (let i = 0; i < bricksRowsRadu * rowBricksNumberRadu; i++) {
-        bricksRadu.push({
-            hit: false,
-            x: i*70,
-            y: 15,
-            color: "#0000ff",
-            width: 50,
-            height: 20,
-        })
-    }
+  let x = marginRadu;
+  for (let i = 0; i < bricksRowsRadu * rowBricksNumberRadu; i++) {
+    const row = Math.floor(i / rowBricksNumberRadu) + 1;
+
+    x = x + brickWidthRadu + distanceBetweenBricksRadu;
+    if (i % rowBricksNumberRadu == 0) x = marginRadu;
+
+    bricksRadu.push({
+      hit: false,
+      x,
+      y: row * 35,
+      color: "#0000ff",
+      width: brickWidthRadu,
+      height: 20,
+      row,
+    });
+  }
 }
 
 function createBicksRadu() {
-
-    bricksRadu.forEach(brick => {
-        fill(brick.color);
-        rect(brick.x, brick.y, brick.width, brick.height)
-    })
- 
+  bricksRadu.forEach((brick) => {
+    fill(brick.color);
+    rect(brick.x, brick.y, brick.width, brick.height);
+  });
 }
